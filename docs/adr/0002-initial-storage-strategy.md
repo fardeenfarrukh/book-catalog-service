@@ -6,11 +6,11 @@ Proposed — pending review
 
 ## Date
 
-2026-10-29
+2026-10-28
 
 ## Owner
 
-Syed Fardeen
+Project contributor
 
 ## 1. Context
 
@@ -124,21 +124,8 @@ Revisit this decision before deploying the service for real catalog data, requir
 
 When a database is selected, record that decision in a separate ADR and update the implementation and project documentation accordingly.
 
-## 8. Compliance
+## 8. Notes and Change History
 
-The implementation and project documentation must accurately describe the limitations of the in-memory storage strategy.
-
-- Keep storage operations within the designated data-access module.
-- Ensure automated tests can reset the in-memory store when required for test isolation.
-- Do not represent the current implementation as providing persistence, database transactions, durable constraints, or recovery capabilities.
-- Evaluate persistence, data integrity, inventory consistency, and operational requirements before selecting a database.
-- Document a future database selection in a separate ADR and update the implementation and documentation to reflect the approved decision.
-
-## 9. Notes
-
-- **Author:** Syed Fardeen
 - **Version:** 0.1
-
-### Changelog
-
-- **Version 0.1 — 2026-10-28:** Initial proposed version.
+- **Changelog:**
+  - 0.1 — 2026-10-28: Initial proposed version.

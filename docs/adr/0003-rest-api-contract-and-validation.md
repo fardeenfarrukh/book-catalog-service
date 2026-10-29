@@ -6,11 +6,11 @@ Proposed — pending review
 
 ## Date
 
-2026-10-29
+2026-10-28
 
 ## Owner
 
-Syed Fardeen
+Project contributor
 
 ## 1. Context
 
@@ -135,7 +135,7 @@ The current implementation replaces the inventory quantity with the supplied qua
 - The API does not currently implement optimistic concurrency control or transactional inventory adjustments.
 - The initial error format is simple and may need expansion if the API grows.
 
-## 6. Implementation Considerations
+## 6. Implementation and Compliance
 
 - Keep endpoint definitions in the routes layer.
 - Keep HTTP request and response handling in the controllers.
@@ -150,23 +150,8 @@ Revisit this decision if the service adds pagination, sorting, ISBN uniqueness, 
 
 Any intentional change to the public API contract should be reflected in the README, automated tests, and relevant architectural documentation.
 
-## 8. Compliance
+## 8. Notes and Change History
 
-The API implementation must follow the endpoint contract and validation rules documented in this ADR.
-
-- Keep routing, HTTP handling, and business validation within their designated architectural layers.
-- Reject invalid book data before it is stored or updated.
-- Preserve existing book IDs during updates.
-- Reject negative and fractional inventory quantities.
-- Return the documented HTTP status codes for validation failures and missing books.
-- Maintain automated tests for the API contract and its error cases.
-- Update the README and relevant documentation when the public API contract changes.
-
-## 9. Notes
-
-- **Author:** Syed Fardeen
 - **Version:** 0.1
-
-### Changelog
-
-- **Version 0.1 — 2026-10-28:** Initial proposed version.
+- **Changelog:**
+  - 0.1 — 2026-10-28: Initial proposed version.
