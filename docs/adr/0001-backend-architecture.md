@@ -6,11 +6,11 @@ Proposed — pending review
 
 ## Date
 
-2026-10-28
+2026-10-29
 
 ## Owner
 
-Project contributor
+Syed Fardeen
 
 ## 1. Context
 
@@ -116,8 +116,17 @@ Review this decision if the service grows to require independently deployed comp
 
 A change in storage technology should also be documented in its own ADR rather than silently changing the decision recorded here.
 
-## 8. Notes and Change History
+## 8. Compliance
 
+The implementation should follow the architectural boundaries documented in this ADR. Changes to routing, validation, business rules, data access, or application startup should preserve the separation of responsibilities unless a documented architectural decision justifies a change.
+
+Automated tests should be updated when API behavior or business rules change, and any significant departure from this architecture should be reviewed and documented.
+
+## 9. Notes
+
+- **Author:** Syed Fardeen
 - **Version:** 0.1
-- **Changelog:**
-  - 0.1 — 2026-10-28: Initial proposed version.
+
+### Changelog
+
+- **Version 0.1 — 2026-10-28:** Initial proposed version.

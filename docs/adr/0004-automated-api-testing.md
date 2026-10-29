@@ -6,7 +6,7 @@ Proposed — pending review
 
 ## Date
 
-2026-10-28
+2026-10-29
 
 ## Owner
 
@@ -136,7 +136,7 @@ As the service develops, consider adding tests for:
 
 New tests should be added when new requirements or bug fixes change the expected behavior of the API.
 
-## 8. Implementation and Compliance
+## 8. Implementation Considerations
 
 - Keep tests in the `src/tests` directory.
 - Use Jest for test execution and assertions.
@@ -151,8 +151,22 @@ Revisit this decision if the project adopts a persistent database, requires inte
 
 A significant change in testing tools or strategy should be documented in a new ADR or an appropriately reviewed revision while preserving the project's decision history.
 
-## 10. Notes and Change History
+## 10. Compliance
 
+The automated testing implementation must follow the testing strategy documented in this ADR.
+
+- Use Jest and Supertest for the current backend API test suite.
+- Import the Express application without starting a separate listening server.
+- Clear the in-memory store before each test to maintain test isolation.
+- Maintain tests for core API operations and important validation rules.
+- Run `npm test` after backend changes and before submitting the implementation for review.
+- Update the testing documentation when coverage, tools, or strategy changes significantly.
+
+## 11. Notes
+
+- **Author:** Syed Fardeen
 - **Version:** 0.1
-- **Changelog:**
-  - 0.1 — 2026-10-28: Initial proposed version.
+
+### Changelog
+
+- **Version 0.1 — 2026-10-28:** Initial proposed version.
